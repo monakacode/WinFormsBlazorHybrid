@@ -1,6 +1,6 @@
 ﻿namespace WinFormsBlazorHybrid
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,12 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            blazorWebView = new Microsoft.AspNetCore.Components.WebView.WindowsForms.BlazorWebView();
+            SuspendLayout();
+            // 
+            // blazorWebView
+            // 
+            blazorWebView.Dock = DockStyle.Fill;
+            blazorWebView.Location = new Point(0, 0);
+            blazorWebView.Name = "blazorWebView";
+            blazorWebView.Size = new Size(800, 450);
+            blazorWebView.TabIndex = 0;
+            blazorWebView.Text = "blazorWebView1";
+            // 
+            // MainForm
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(blazorWebView);
+            Name = "MainForm";
             Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Microsoft.AspNetCore.Components.WebView.WindowsForms.BlazorWebView blazorWebView;
     }
 }
