@@ -61,3 +61,14 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+# ライブラリを除外
+**/wwwroot/lib/** linguist-vendored
+
+# 統計から除外
+*.html linguist-vendored
+*.css linguist-vendored
+*.razor.css linguist-vendored
+
+# C#としてカウント
+*.razor linguist-language=C#
